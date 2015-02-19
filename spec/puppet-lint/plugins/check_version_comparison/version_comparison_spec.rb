@@ -10,7 +10,7 @@ describe 'version_comparison' do
         if versioncmp($::lsbmajdistrelease, '4') >= 0 { }
         if versioncmp($version, '1') <= 0 { }
         if versioncmp($some_version, '3') < 0 { }
-        if $version == '2' { }
+        if $mod::params::version == '2' { }
         EOS
       end
 
@@ -25,7 +25,7 @@ describe 'version_comparison' do
         if $::lsbmajdistrelease >= 4 { }
         if $version <= 1 { }
         if $some_version < 3 { }
-        if $version == 2 { }
+        if $mod::params::version == 2 { }
         EOS
       end
 
@@ -57,7 +57,7 @@ describe 'version_comparison' do
         if versioncmp($::lsbmajdistrelease, '4') >= 0 { }
         if versioncmp($version, '1') <= 0 { }
         if versioncmp($some_version, '3') < 0 { }
-        if $version == '2' { }
+        if $mod::params::version == '2' { }
         EOS
       end
 
@@ -72,7 +72,7 @@ describe 'version_comparison' do
         if $::lsbmajdistrelease >= 4 { }
         if $version <= 1 { }
         if $some_version < 3 { }
-        if $version == 2 { }
+        if $mod::params::version == 2 { }
         EOS
       end
 
@@ -93,7 +93,7 @@ describe 'version_comparison' do
         if versioncmp($::lsbmajdistrelease, '4') >= 0 { }
         if versioncmp($version, '1') <= 0 { }
         if versioncmp($some_version, '3') < 0 { }
-        if versioncmp($version, '2') == 0 { }
+        if versioncmp($mod::params::version, '2') == 0 { }
         EOS
         )
       end
