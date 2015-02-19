@@ -28,11 +28,11 @@ PuppetLint.new_check(:version_comparison) do
   def fix(problem)
     versioncmp = PuppetLint::Lexer::Token.new(
       :NAME, 'versioncmp',
-      problem[:token].line, problem[:token].column,
+      problem[:token].line, problem[:token].column
     )
     lparen = PuppetLint::Lexer::Token.new(
       :LPAREN, '(',
-      problem[:token].line, problem[:token].column+1,
+      problem[:token].line, problem[:token].column+1
     )
     rparen = PuppetLint::Lexer::Token.new(
       :RPAREN, ')',
