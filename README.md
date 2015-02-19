@@ -19,7 +19,7 @@ Not doing so will fail with the future parser starting with Puppet 3.7.4.
 #### What you have done
 
 ```puppet
-if $version >= '4' { }
+if $version >= 4 { }
 ```
 
 #### What you should have done
