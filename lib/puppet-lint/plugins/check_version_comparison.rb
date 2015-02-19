@@ -57,11 +57,11 @@ PuppetLint.new_check(:version_comparison) do
     value_token.value = 0
     value_token.type = :NUMBER
     # Insert ')' after value
-    tokens.insert(idx+2, space)
-    tokens.insert(idx+2, rparen)
+    tokens.insert(idx+1, rparen)
     # Insert value as string after comma
-    tokens.insert(idx+2, value)
+    tokens.insert(idx+1, value)
     # Insert comma after token
+    tokens.insert(idx+1, space)
     tokens.insert(idx+1, comma)
     # Insert 'versioncmp(' before token
     tokens.insert(idx, lparen)

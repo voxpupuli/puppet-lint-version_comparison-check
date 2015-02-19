@@ -73,11 +73,12 @@ describe 'version_comparison' do
         if $version <= 1 { }
         if $some_version < 3 { }
         if $mod::params::version == 2 { }
+        if $::operatingsystemmajrelease<'6' { }
         EOS
       end
 
-      it 'should detect 4 problems' do
-        expect(problems).to have(4).problems
+      it 'should detect 5 problems' do
+        expect(problems).to have(5).problems
       end
 
       it 'should create warnings' do
@@ -85,6 +86,7 @@ describe 'version_comparison' do
         expect(problems).to contain_fixed(msg).on_line(2).in_column(12)
         expect(problems).to contain_fixed(msg).on_line(3).in_column(12)
         expect(problems).to contain_fixed(msg).on_line(4).in_column(12)
+        expect(problems).to contain_fixed(msg).on_line(5).in_column(12)
       end
 
       it 'should should use versioncmp' do
@@ -94,6 +96,7 @@ describe 'version_comparison' do
         if versioncmp($version, '1') <= 0 { }
         if versioncmp($some_version, '3') < 0 { }
         if versioncmp($mod::params::version, '2') == 0 { }
+        if versioncmp($::operatingsystemmajrelease, '6')<0 { }
         EOS
         )
       end
