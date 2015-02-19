@@ -34,10 +34,10 @@ describe 'version_comparison' do
       end
 
       it 'should create warnings' do
-        expect(problems).to contain_warning(msg).on_line(1).in_column(33)
-        expect(problems).to contain_warning(msg).on_line(2).in_column(21)
-        expect(problems).to contain_warning(msg).on_line(3).in_column(26)
-        expect(problems).to contain_warning(msg).on_line(4).in_column(21)
+        expect(problems).to contain_warning(msg).on_line(1).in_column(12)
+        expect(problems).to contain_warning(msg).on_line(2).in_column(12)
+        expect(problems).to contain_warning(msg).on_line(3).in_column(12)
+        expect(problems).to contain_warning(msg).on_line(4).in_column(12)
       end
     end
   end
@@ -81,13 +81,13 @@ describe 'version_comparison' do
       end
 
       it 'should create warnings' do
-        expect(problems).to contain_fixed(msg).on_line(1).in_column(33)
-        expect(problems).to contain_fixed(msg).on_line(2).in_column(21)
-        expect(problems).to contain_fixed(msg).on_line(3).in_column(26)
-        expect(problems).to contain_fixed(msg).on_line(4).in_column(21)
+        expect(problems).to contain_fixed(msg).on_line(1).in_column(12)
+        expect(problems).to contain_fixed(msg).on_line(2).in_column(12)
+        expect(problems).to contain_fixed(msg).on_line(3).in_column(12)
+        expect(problems).to contain_fixed(msg).on_line(4).in_column(12)
       end
 
-      it 'should should add colons' do
+      it 'should should use versioncmp' do
         expect(manifest).to eq(
         <<-EOS
         if versioncmp($::lsbmajdistrelease, '4') >= 0 { }
