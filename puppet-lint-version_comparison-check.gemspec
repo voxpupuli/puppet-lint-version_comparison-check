@@ -1,9 +1,9 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-version_comparison-check'
   spec.version     = '0.1.2'
-  spec.homepage    = 'https://github.com/camptocamp/puppet-lint-version_comparison-check'
+  spec.homepage    = 'https://github.com/puppet-community/puppet-lint-version_comparison-check'
   spec.license     = 'Apache-2.0'
-  spec.author      = 'Camptocamp'
+  spec.author      = 'Puppet Community'
   spec.email       = 'raphael.pinson@camptocamp.com'
   spec.files       = Dir[
     'README.md',
