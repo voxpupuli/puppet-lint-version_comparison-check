@@ -9,6 +9,20 @@ puppet-lint-version_comparison-check
 
 A puppet-lint plugin to check for versions compared as numbers.
 
+## Installing
+
+### From the command line
+
+```shell
+$ gem install puppet-lint-version_comparison-check
+```
+
+### In a Gemfile
+
+```ruby
+gem 'puppet-lint-version_comparison-check', :require => false
+```
+
 ## Checks
 
 ### Version compared as number
