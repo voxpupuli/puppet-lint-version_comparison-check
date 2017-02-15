@@ -10,7 +10,7 @@ PuppetLint.new_check(:version_comparison) do
   def check
     tokens.each_with_index do |token, token_idx|
       next unless token.type == :VARIABLE
-      next unless token.value =~ /(?:version|release)$/
+      next unless token.value =~ /(?:version|release)$|\[(?:version|release)\]|\['(?:version|release)'\]/
       next unless is_num_comparison?(token.next_code_token)
       notify :warning, {
         :message => 'version compared as number',
@@ -19,7 +19,7 @@ PuppetLint.new_check(:version_comparison) do
         :token   => token,
       }
     end
-  end 
+  end
 
   def compared_value(token)
     token.next_code_token.next_code_token.value
