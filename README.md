@@ -3,8 +3,7 @@ puppet-lint-version_comparison-check
 
 [![License](https://img.shields.io/github/license/voxpupuli/puppet-lint-version_comparison-check.svg)](https://github.com/voxpupuli/puppet-lint-version_comparison-check/blob/master/LICENSE)
 [![Test](https://github.com/voxpupuli/puppet-lint-version_comparison-check/actions/workflows/test.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-version_comparison-check/actions/workflows/test.yml)
-[![Release](https://github.com/voxpupuli/puppet-lint-version_comparison-check/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-version_comparison-check/actions/workflows/release.ym
-l)
+[![Release](https://github.com/voxpupuli/puppet-lint-version_comparison-check/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-version_comparison-check/actions/workflows/release.yml)
 [![RubyGem Version](https://img.shields.io/gem/v/puppet-lint-version_comparison-check.svg)](https://rubygems.org/gems/puppet-lint-version_comparison-check)
 [![RubyGem Downloads](https://img.shields.io/gem/dt/puppet-lint-version_comparison-check.svg)](https://rubygems.org/gems/puppet-lint-version_comparison-check)
 [![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
