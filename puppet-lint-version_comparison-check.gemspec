@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-version_comparison-check'
-  spec.version     = '1.0.0'
+  spec.version     = '1.1.0'
   spec.homepage    = 'https://github.com/voxpupuli/puppet-lint-version_comparison-check'
   spec.license     = 'Apache-2.0'
   spec.author      = 'Vox Pupuli'
@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
     'LICENSE',
     'lib/**/*',
     'spec/**/*',
+    'CHANGELOG.md',
   ]
   spec.test_files  = Dir['spec/**/*']
   spec.summary     = 'A puppet-lint plugin to check for versions compared as numbers.'
