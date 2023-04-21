@@ -12,16 +12,12 @@ Gem::Specification.new do |spec|
     'spec/**/*',
     'CHANGELOG.md',
   ]
-  spec.test_files  = Dir['spec/**/*']
   spec.summary     = 'A puppet-lint plugin to check for versions compared as numbers.'
   spec.description = <<-EOF
     A puppet-lint plugin to check for versions compared as numbers.
   EOF
 
-  spec.add_dependency             'puppet-lint', '>= 1.0', '< 4'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rspec-its', '~> 1.0'
-  spec.add_development_dependency 'rspec-collection_matchers', '~> 1.0'
-  spec.add_development_dependency 'simplecov'
-  spec.add_development_dependency 'rake'
+  spec.required_ruby_version = '>= 2.7.0'
+
+  spec.add_dependency 'puppet-lint', '>= 3', '< 5'
 end

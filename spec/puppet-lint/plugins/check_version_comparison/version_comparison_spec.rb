@@ -14,7 +14,7 @@ describe 'version_comparison' do
         EOS
       end
 
-      it 'should not detect any problems' do
+      it 'does not detect any problems' do
         expect(problems).to have(0).problems
       end
     end
@@ -29,11 +29,11 @@ describe 'version_comparison' do
         EOS
       end
 
-      it 'should detect 4 problems' do
+      it 'detects 4 problems' do
         expect(problems).to have(4).problems
       end
 
-      it 'should create warnings' do
+      it 'creates warnings' do
         expect(problems).to contain_warning(msg).on_line(1).in_column(12)
         expect(problems).to contain_warning(msg).on_line(2).in_column(12)
         expect(problems).to contain_warning(msg).on_line(3).in_column(12)
@@ -61,7 +61,7 @@ describe 'version_comparison' do
         EOS
       end
 
-      it 'should not detect any problems' do
+      it 'does not detect any problems' do
         expect(problems).to have(0).problems
       end
     end
@@ -77,11 +77,11 @@ describe 'version_comparison' do
         EOS
       end
 
-      it 'should detect 5 problems' do
+      it 'detects 5 problems' do
         expect(problems).to have(5).problems
       end
 
-      it 'should create warnings' do
+      it 'creates warnings' do
         expect(problems).to contain_fixed(msg).on_line(1).in_column(12)
         expect(problems).to contain_fixed(msg).on_line(2).in_column(12)
         expect(problems).to contain_fixed(msg).on_line(3).in_column(12)
@@ -89,9 +89,9 @@ describe 'version_comparison' do
         expect(problems).to contain_fixed(msg).on_line(5).in_column(12)
       end
 
-      it 'should should use versioncmp' do
+      it 'shoulds use versioncmp' do
         expect(manifest).to eq(
-        <<-EOS
+          <<-EOS,
         if versioncmp($::lsbmajdistrelease, '4') >= 0 { }
         if versioncmp($version, '1') <= 0 { }
         if versioncmp($some_version, '3') < 0 { }
