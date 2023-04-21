@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
     A puppet-lint plugin to check for versions compared as numbers.
   EOF
 
+  spec.required_ruby_version = '>= 2.7.0'
+
   spec.add_dependency             'puppet-lint', '>= 3', '< 5'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec-its', '~> 1.0'
