@@ -2,9 +2,10 @@ PuppetLint.new_check(:version_comparison) do
   def is_num_comparison?(token)
     return false unless token
     return true if %i[GREATEREQUAL GREATERTHAN LESSEQUAL LESSTHAN].include?(token.type)
-    return true if %i[ISEQUAL NOTEQUAL].include?(token.type) &&
-                   token.next_code_token &&
-                   token.next_code_token.type == :NUMBER
+
+    true if %i[ISEQUAL NOTEQUAL].include?(token.type) &&
+            token.next_code_token &&
+            token.next_code_token.type == :NUMBER
   end
 
   def check
